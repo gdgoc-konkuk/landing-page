@@ -1,0 +1,84 @@
+/* Blob animation styles for Apply25 component */
+
+@keyframes wave-slow {
+  0%,
+  100% {
+    transform: translate(-150px, -100px) rotate(-15deg) scale(1);
+  }
+  25% {
+    transform: translate(-145px, -105px) rotate(-14deg) scale(1.02);
+  }
+  50% {
+    transform: translate(-155px, -95px) rotate(-16deg) scale(0.98);
+  }
+  75% {
+    transform: translate(-148px, -102px) rotate(-15.5deg) scale(1.01);
+  }
+}
+
+@keyframes wave-reverse {
+  0%,
+  100% {
+    transform: translate(200px, 150px) rotate(20deg) scale(1);
+  }
+  30% {
+    transform: translate(205px, 145px) rotate(21deg) scale(0.99);
+  }
+  60% {
+    transform: translate(195px, 155px) rotate(19deg) scale(1.01);
+  }
+  90% {
+    transform: translate(202px, 148px) rotate(20.5deg) scale(1.02);
+  }
+}
+
+@keyframes wave-medium {
+  0%,
+  100% {
+    transform: rotate(45deg) scale(1);
+  }
+  40% {
+    transform: rotate(47deg) scale(1.03);
+  }
+  80% {
+    transform: rotate(43deg) scale(0.97);
+  }
+}
+
+@keyframes wave-fast {
+  0%,
+  100% {
+    transform: rotate(-30deg) scale(1);
+  }
+  20% {
+    transform: rotate(-28deg) scale(1.04);
+  }
+  50% {
+    transform: rotate(-32deg) scale(0.96);
+  }
+  80% {
+    transform: rotate(-29deg) scale(1.02);
+  }
+}
+
+.animate-wave-slow {
+  animation: wave-slow 8s ease-in-out infinite;
+}
+
+.animate-wave-reverse {
+  animation: wave-reverse 10s ease-in-out infinite;
+}
+
+.animate-wave-medium {
+  animation: wave-medium 6s ease-in-out infinite;
+}
+
+.animate-wave-fast {
+  animation: wave-fast 5s ease-in-out infinite;
+}
+
+/* Style for word-unit line breaks */
+.word-break-keep-all {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
