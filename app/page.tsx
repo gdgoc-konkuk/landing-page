@@ -1,8 +1,9 @@
+import ActivitySection from "@/app/_component/activity/ActivitySection";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
-      This is the GDGoC 25-26 landing page.
+      <ActivitySection />
     </div>
   );
 }
