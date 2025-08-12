@@ -29,7 +29,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({
 
   return (
     <div
-      className="w-[354px] h-[375px] perspective-1000 cursor-pointer"
+      className="w-[300px] h-[320px] perspective-1000 cursor-pointer"
       onClick={handleFlip}
     >
       <div
