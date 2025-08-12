@@ -58,6 +58,8 @@ const config = {
           yellow: '#f9ab00',
           green: '#34a853',
           gray: '#f1f3f4',
+          Title: '#000000',
+          Contents: '#606060',
         },
       },
       borderRadius: {
@@ -255,6 +257,8 @@ const config = {
         suite: 'var(--font-suite)',
         google: 'var(--font-google-sans)',
         gangwon: 'var(--font-gangwon)',
+        opensans: ['var(--font-open-sans)'],
+        robotomono: ['var(--font-roboto-mono)'],
       },
     },
   },
