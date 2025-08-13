@@ -1,15 +1,22 @@
 ﻿import React from 'react';
 
+interface IconColors {
+  topLeft: string;
+  bottomLeft: string;
+  bottomRight: string;
+  topRight: string;
+}
+
 interface ActivityIconProps {
   colors: IconColors;
 }
 
-function ActivityIcon ({ colors } :  ActivityIconProps) {
+function ActivityIcon({ colors }: ActivityIconProps) {
   const petalStyle =
-    'w-[46.4%] h-[35.9%] absolute origin-top-left rounded-full border-[3px] border-black';
+    'w-[46.4%] h-[35.9%] absolute origin-top-left rounded-full border-[4px] border-black';
 
   return (
-    <div className="relative w-full aspect-[154/91]">
+    <div className="relative w-[140px] aspect-[154/91]">
       <div
         className={`${petalStyle} left-[12.1%] top-[25.5%] rotate-[35deg]`}
         style={{ backgroundColor: colors.topLeft }}
@@ -28,6 +35,6 @@ function ActivityIcon ({ colors } :  ActivityIconProps) {
       />
     </div>
   );
-};
+}
 
 export default ActivityIcon;
