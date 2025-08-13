@@ -1,7 +1,7 @@
 'use client';
 
 import { useInView } from 'react-intersection-observer';
-import SolutionCard from './SolutionCard';
+import SolutionCard from '@/app/24/_component/solution-challenge/SolutionCard'
 import { useEffect, useState } from 'react';
 import {
   Carousel,

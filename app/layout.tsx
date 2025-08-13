@@ -46,6 +46,20 @@ const googleSans = localFont({
   variable: '--font-google-sans',
 });
 
+const openSans = localFont({
+  src: '../public/fonts/OpenSans_Condensed-Regular.ttf',
+  display: 'swap',
+  weight: '400',
+  variable: '--font-open-sans',
+});
+
+const robotoMono = localFont({
+  src: '../public/fonts/RobotoMono-Regular.ttf',
+  display: 'swap',
+  weight: '400',
+  variable: '--font-roboto-mono',
+});
+
 export const metadata: Metadata = {
   title: 'GDSC Konkuk',
   description: 'GDSC Konkuk Landing Page',
@@ -59,7 +73,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${pretendard.variable} ${suite.variable} ${googleSans.variable} ${gangwon.variable}`}
+      className={`${pretendard.variable} ${suite.variable} ${googleSans.variable} ${gangwon.variable} ${openSans.variable} ${robotoMono.variable}`}
     >
       <body className={pretendard.className}>{children}</body>
     </html>
