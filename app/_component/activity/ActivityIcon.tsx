@@ -1,12 +1,5 @@
 ﻿import React from 'react';
 
-interface IconColors {
-  topLeft: string;
-  bottomLeft: string;
-  bottomRight: string;
-  topRight: string;
-}
-
 interface ActivityIconProps {
   colors: IconColors;
 }
