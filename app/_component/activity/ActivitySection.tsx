@@ -4,7 +4,7 @@ import { ACTIVITY_DATA } from '@/config/activity.config';
 
 const ActivitySection = () => {
   return (
-    <section className="w-full flex flex-col items-center py-20 sm:px-24 md:px-24 lg:px-36 xl:px-64">
+    <section className="w-full flex flex-col items-center py-20 sm:px-24 md:px-20 xl:px-48">
       <div className="text-center mb-16">
         <h1 className="text-google-yellow text-5xl md:text-5xl font-google font-bold tracking-wide">
           Activity
