@@ -5,12 +5,7 @@ import ActivityIcon from '@/app/_component/activity/ActivityIcon';
 
 interface ActivityCardProps {
   title: string;
-  colors: {
-    topLeft: string;
-    topRight: string;
-    bottomLeft: string;
-    bottomRight: string;
-  };
+  colors: IconColors;
   description: string;
   backgroundImage: string;
 }
