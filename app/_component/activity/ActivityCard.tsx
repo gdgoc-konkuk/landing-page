@@ -15,12 +15,12 @@ interface ActivityCardProps {
   backgroundImage: string;
 }
 
-const ActivityCard: React.FC<ActivityCardProps> = ({
+function ActivityCard ({
   title,
   colors,
   description,
   backgroundImage,
-}) => {
+} : ActivityCardProps ) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleFlip = () => {

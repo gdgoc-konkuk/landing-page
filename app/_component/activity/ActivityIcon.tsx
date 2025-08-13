@@ -11,7 +11,7 @@ interface ActivityIconProps {
   colors: IconColors;
 }
 
-const ActivityIcon: React.FC<ActivityIconProps> = ({ colors }) => {
+function ActivityIcon ({ colors } :  ActivityIconProps) {
   const petalStyle =
     'w-[46.4%] h-[35.9%] absolute origin-top-left rounded-full border-[3px] border-black';
 
