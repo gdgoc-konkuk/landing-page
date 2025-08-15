@@ -250,6 +250,10 @@ const config = {
           '66.6%': { transform: 'translateX(0%)', opacity: '0', zIndex: '1' },
           '70%': { transform: 'translateX(0%)', opacity: '1', zIndex: '1' },
         },
+        carousel: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -260,6 +264,7 @@ const config = {
         'slide-0': 'slide 6s infinite',
         'slide-2': 'slide 6s infinite 2s',
         'slide-4': 'slide 6s infinite 4s',
+        carousel: 'carousel 15s linear infinite',
       },
       fontFamily: {
         pretendard: 'var(--font-pretendard)',
