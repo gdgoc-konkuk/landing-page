@@ -48,25 +48,22 @@ const Apply = () => {
     }
   }, [controls, inView]);
 
+  const handleMouseMove = (e: MouseEvent) => {
+    setMousePosition({ x: e.clientX, y: e.clientY });
+  };
+
   useEffect(() => {
     window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('wordHover', handleWordHover as EventListener);
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('wordHover', handleWordHover as EventListener);
     };
   }, []);
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [blurColor, setBlurColor] = useState(DEFAULT_BLUR_COLOR);
 
-  const handleMouseMove = (e: MouseEvent) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
-  };
-
-  const handleWordHover = (e: CustomEvent) => {
-    const color = e.detail;
+  const handleWordHover = (color: string | null) => {
     setBlurColor(color || DEFAULT_BLUR_COLOR);
   };
 
@@ -100,7 +97,10 @@ const Apply = () => {
         <div
           className={`mb-16 break-keep ${isMobile ? 'text-base' : 'text-xl'}`}
         >
-          <AnimatedWords text="Google Developer Groups on Campus Konkuk 에서 함께 성장해요." />
+          <AnimatedWords
+            hoverHandler={handleWordHover}
+            text="Google Developer Groups on Campus Konkuk 에서 함께 성장해요."
+          />
         </div>
 
         <motion.h2
