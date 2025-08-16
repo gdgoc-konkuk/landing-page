@@ -4,19 +4,19 @@ import { ACTIVITY_DATA } from '@/config/activity.config';
 
 const ActivitySection = () => {
   return (
-    <section className="w-full flex flex-col items-center py-20 sm:px-24 md:px-20 xl:px-48">
-      <div className="text-center mb-16">
-        <h1 className="text-google-yellow text-5xl md:text-5xl font-google font-bold tracking-wide">
+    <section className="flex flex-col items-center py-12 px-4 gap-12 md:px-20 xl:px-48">
+      <div className="text-center">
+        <h1 className="text-google-yellow text-2xl md:text-5xl font-google font-bold tracking-wide">
           Activity
         </h1>
-        <p className="text-google-Contents text-base md:text-lg font-robotomono font-regular mt-4 leading-relaxed break-keep">
+        <p className="text-google-Contents text-sm md:text-lg font-robotomono font-regular mt-4 leading-relaxed break-keep">
           GDGoC Konkuk에서 <br className="md:hidden" />
           경험할 수 있는 활동을 소개합니다!
           <br />
           다양한 활동을 통해 함께 성장할 수 있어요.
         </p>
       </div>
-      <div className="flex flex-wrap justify-center gap-16 md:gap-20">
+      <div className="flex flex-wrap justify-center gap-8 md:gap-20">
         {ACTIVITY_DATA.map((activity, index) => (
           <div
             key={index}
@@ -37,5 +37,3 @@ const ActivitySection = () => {
 };
 
 export default ActivitySection;
-
-

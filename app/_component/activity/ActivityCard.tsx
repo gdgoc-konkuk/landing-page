@@ -24,7 +24,7 @@ function ActivityCard ({
 
   return (
     <div
-      className="w-[300px] h-[320px] perspective-1000 cursor-pointer"
+      className="w-[195px] h-[208px] md:w-[300px] md:h-[320px] perspective-1000 cursor-pointer"
       onClick={handleFlip}
     >
       <div
@@ -32,10 +32,9 @@ function ActivityCard ({
           isFlipped ? 'rotate-y-180' : ''
         }`}
       >
-
-        <div className="absolute w-full h-full backface-hidden flex flex-col justify-center items-center gap-12 p-12 bg-white rounded-[25px] shadow-[0px_2px_2px_1px_rgba(0,0,0,0.25)]">
+        <div className="absolute w-full h-full backface-hidden flex flex-col justify-center items-center gap-4 md:gap-12 p-12 bg-white rounded-[25px] shadow-[0px_2px_2px_1px_rgba(0,0,0,0.25)]">
           <ActivityIcon colors={colors} />
-          <div className="self-stretch text-center justify-start text-google-Title text-3xl font-google tracking-tight">
+          <div className="self-stretch text-center justify-start text-google-Title text-lg md:text-3xl font-google tracking-tight">
             {title}
           </div>
         </div>
@@ -54,8 +53,8 @@ function ActivityCard ({
             }`}
           />
 
-          <div className="relative z-10 p-9 flex flex-col justify-start items-start">
-            <div className="text-white text-2xl font-semibold font-opensans leading-10 break-keep">
+          <div className="relative z-10 p-7 md:p-9 flex flex-col justify-start items-start">
+            <div className="text-white text-lg md:text-2xl font-semibold font-opensans leading-8 md:leading-10 break-keep">
               <p dangerouslySetInnerHTML={{ __html: description }} />
             </div>
           </div>
