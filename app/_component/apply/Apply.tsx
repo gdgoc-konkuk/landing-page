@@ -2,8 +2,7 @@
 
 import { useIsMobile } from '../../../hooks/useIsMobile';
 import { useState, useEffect } from 'react';
-import { motion, useAnimation, Variants } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { motion, Variants } from 'framer-motion';
 import AnimatedWords from './StyledWords';
 
 // Animation configurations
@@ -36,17 +35,8 @@ const BLUR_RADIUS = 600;
 
 const Apply = () => {
   const isMobile = useIsMobile();
-  const controls = useAnimation();
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    }
-  }, [controls, inView]);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [blurColor, setBlurColor] = useState(DEFAULT_BLUR_COLOR);
 
   const handleMouseMove = (e: MouseEvent) => {
     setMousePosition({ x: e.clientX, y: e.clientY });
@@ -54,14 +44,10 @@ const Apply = () => {
 
   useEffect(() => {
     window.addEventListener('mousemove', handleMouseMove);
-
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
-
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [blurColor, setBlurColor] = useState(DEFAULT_BLUR_COLOR);
 
   const handleWordHover = (color: string | null) => {
     setBlurColor(color || DEFAULT_BLUR_COLOR);
@@ -80,9 +66,9 @@ const Apply = () => {
 
   return (
     <motion.section
-      ref={ref}
       initial="hidden"
-      animate={controls}
+      whileInView="visible"
+      viewport={{ once: false, amount: 0.1 }}
       variants={CONTAINER_VARIANTS}
       className="relative flex min-h-screen items-center justify-center overflow-hidden bg-google-white"
       style={backgroundStyle}
