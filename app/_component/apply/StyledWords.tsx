@@ -1,5 +1,7 @@
 import { motion, Variants } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
+import resolveConfig from 'tailwindcss/resolveConfig';
+import tailwindConfig from '../../../tailwind.config';
 
 // Animation configurations
 const HOVER_ANIMATION = {
@@ -17,48 +19,43 @@ const ITEM_VARIANTS: Variants = {
   },
 };
 
-// Google brand colors mapping
-const GOOGLE_COLORS = {
-  Google: '#4285f4',
-  Developer: '#ea4335',
-  Groups: '#fbbc05',
-  Campus: '#34a853',
-  Konkuk: '#34a853',
+// Get resolved Tailwind config
+const fullConfig = resolveConfig(tailwindConfig);
+const googleColors = fullConfig.theme.colors.google;
+
+// Simple word to color mapping
+const WORD_COLORS = {
+  Google: googleColors.blue,
+  Developer: googleColors.red,
+  Groups: googleColors.yellow,
+  Campus: googleColors.green,
+  Konkuk: googleColors.green,
 } as const;
 
-const DEFAULT_COLOR = '#3b3b3b';
+const getWordColor = (word: string) => {
+  // Check if word matches any key (case-insensitive)
+  const matchedKey = Object.keys(WORD_COLORS).find((key) =>
+    word.toLowerCase().includes(key.toLowerCase()),
+  );
 
-const getWordColor = (word: string): string => {
-  for (const [key, color] of Object.entries(GOOGLE_COLORS)) {
-    if (word.includes(key)) {
-      return color;
-    }
-  }
-
-  return DEFAULT_COLOR;
-};
-
-const isGoogleColor = (color: string): boolean => {
-  return color !== DEFAULT_COLOR;
+  return matchedKey
+    ? WORD_COLORS[matchedKey as keyof typeof WORD_COLORS]
+    : googleColors.Subtitle;
 };
 
 interface AnimatedWordsProps {
   text: string;
+  hoverHandler: (color: string | null) => void;
 }
 
-const AnimatedWords = ({ text }: AnimatedWordsProps) => {
+const AnimatedWords = ({ text, hoverHandler }: AnimatedWordsProps) => {
   const words = text.split(' ');
-  const [hoveredColor, setHoveredColor] = useState<string | null>(null);
-
-  // Emit color change event for parent component
-  useEffect(() => {
-    const customEvent = new CustomEvent('wordHover', { detail: hoveredColor });
-    window.dispatchEvent(customEvent);
-  }, [hoveredColor]);
 
   const handleWordHover = (word: string) => {
     const color = getWordColor(word);
-    setHoveredColor(isGoogleColor(color) ? color : null);
+    const isDefaultColor = color === googleColors.Subtitle;
+    // Only pass color if it's not the default subtitle color
+    hoverHandler(isDefaultColor ? null : color);
   };
 
   return (
@@ -66,14 +63,11 @@ const AnimatedWords = ({ text }: AnimatedWordsProps) => {
       {words.map((word, index) => (
         <motion.span
           key={index}
-          style={{
-            color: getWordColor(word),
-            display: 'inline-block',
-            marginRight: '0.5rem',
-          }}
+          className="inline-block mr-2"
+          style={{ color: getWordColor(word) }}
           whileHover={HOVER_ANIMATION}
           onMouseEnter={() => handleWordHover(word)}
-          onMouseLeave={() => setHoveredColor(null)}
+          onMouseLeave={() => hoverHandler(null)}
         >
           {word}
         </motion.span>
