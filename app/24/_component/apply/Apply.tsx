@@ -1,10 +1,10 @@
 'use client';
 import { useEffect, useState } from 'react';
-import Popup from './Popup';
-import ApplyKeywords from './ApplyKewords';
 import blueCharacter from '../../../public/images/apply/blueCharacter.webp';
 import Image from 'next/image';
-import ApplyButton from '../../../components/ui/ApplyButton';
+import ApplyKeywords from './ApplyKewords';
+import Popup from './Popup';
+import ApplyButton from '@/components/ui/ApplyButton';
 
 export default function Apply() {
   const [isMobile, setIsMobile] = useState(
