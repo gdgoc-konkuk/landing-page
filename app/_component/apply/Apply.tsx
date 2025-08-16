@@ -1,71 +1,49 @@
 'use client';
-import { useEffect, useState } from 'react';
-import Popup from './Popup';
-import ApplyKeywords from './ApplyKewords';
-import blueCharacter from '../../../public/images/apply/blueCharacter.webp';
-import Image from 'next/image';
-import ApplyButton from '../../../components/ui/ApplyButton';
+import { useIsMobile } from '../../../hooks/useIsMobile';
 
 export default function Apply() {
-  const [isMobile, setIsMobile] = useState(
-    typeof window !== 'undefined' && window.innerWidth <= 1280,
-  );
+  const isMobile = useIsMobile();
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 1280);
-    };
+  return (
+    <section className="relative min-h-screen bg-white overflow-hidden flex items-center justify-center">
+      {/* Main Content */}
+      <div className="relative z-10 text-center px-6 max-w-2xl">
+        {/* Header */}
+        <h1
+          className={`font-bold text-[#34A853] mb-6 break-keep ${
+            isMobile ? 'text-3xl' : 'text-5xl'
+          }`}
+        >
+          GDGoC Konkuk
+        </h1>
 
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+        {/* Subtitle */}
+        <p
+          className={`text-gray-600 mb-16 break-keep ${
+            isMobile ? 'text-base' : 'text-xl'
+          }`}
+        >
+          Google Developer Groups on Campus Konkuk에서 함께 성장해요.
+        </p>
 
-  return isMobile ? ( //mobile view
-    <div className="h-[550px] flex flex-col items-center text-center mt-[100px]">
-      <div className="relative flex flex-col items-center">
-        <div className="w-[128px] absolute -top-[70px] left-1/2 transform -translate-x-1/2 " />
-        <div className="flex flex-col items-center space-y-[11px]">
-          <div className="text-black text-[24px] font-bold whitespace-nowrap">
-            GDSC Konkuk 2기와
-          </div>
-          <ApplyKeywords isMobile={isMobile} />
-        </div>
+        {/* Main Message */}
+        <h2
+          className={`font-bold text-gray-800 mb-12 leading-relaxed break-keep ${
+            isMobile ? 'text-xl' : 'text-3xl'
+          }`}
+        >
+          함께 배우고, 함께 나누는 25-26기 여정을 시작해보세요.
+        </h2>
+
+        {/* CTA Button */}
+        <button
+          className={`bg-[#34A853] text-white font-bold rounded-full transition-all duration-300 hover:bg-[#6AB583] hover:scale-105 hover:shadow-xl shadow-lg ${
+            isMobile ? 'px-10 py-4 text-base' : 'px-16 py-5 text-xl'
+          }`}
+        >
+          지원하기
+        </button>
       </div>
-      <Popup />
-      <div className="text-[#3B3B3B] text-[12px] font-suite mt-[20px] space-y-[8px] whitespace-nowrap">
-        <p>GDSC와 함께 가치를 공유하고 성장하고 싶다면,</p>
-        <p>2024.08.14.~2024.08.23.</p>
-      </div>
-      <div className="flex items-center justify-center">
-        <ApplyButton className="mt-[23px] xl:mt-[56px] w-[128px] h-[37px] whitespace-nowrap" />
-      </div>
-    </div>
-  ) : (
-    //desktop view
-    <div className="flex flex-col items-center text-center mt-[256px]">
-      <div className="relative flex flex-col items-center">
-        <Image
-          src={blueCharacter}
-          alt="Blue Character"
-          className="w-[128px] absolute -top-[105px] left-1/2 transform translate-x-[150px] z-10"
-        />
-        <div className="flex items-center space-x-[11px] whitespace-nowrap">
-          <div className="text-black text-[64px] font-bold whitespace-nowrap">
-            GDSC Konkuk 2기와
-          </div>
-          <div className="z-5 whitespace-nowrap">
-            <ApplyKeywords isMobile={isMobile} />
-          </div>
-        </div>
-      </div>
-      <div className="text-black text-3xl font-semibold mt-[40px] space-y-[8px] whitespace-nowrap">
-        <p>GDSC와 함께 가치를 공유하고 성장하고 싶다면,</p>
-        <p>2024.08.14.~2024.08.23.</p>
-      </div>
-      <ApplyButton className="mt-[23px] xl:mt-[56px] w-[128px] h-[37px] whitespace-nowrap " />
-      <Popup />
-    </div>
+    </section>
   );
 }

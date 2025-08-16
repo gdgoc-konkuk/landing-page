@@ -1,6 +1,6 @@
 import ActivitySection from '@/app/_component/activity/ActivitySection';
 import SolutionChallengeSection from '@/app/_component/solution-challenge/SolutionChallengeSection';
-import Apply25 from './_component/apply/Apply25';
+import Apply from './_component/apply/Apply';
 
 export default function Home() {
   return (
@@ -8,7 +8,7 @@ export default function Home() {
       <ActivitySection />
       <SolutionChallengeSection />
       <ActivitySection />
-      <Apply25 />
+      <Apply />
     </div>
   );
 }
