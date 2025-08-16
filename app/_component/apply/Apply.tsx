@@ -67,6 +67,13 @@ const Apply = () => {
     setBlurColor(color || DEFAULT_BLUR_COLOR);
   };
 
+  const handleApplyClick = () => {
+    window.open(
+      'https://gdg.community.dev/gdg-on-campus-konkuk-university-seoul-south-korea/',
+      '_blank',
+    );
+  };
+
   const backgroundStyle = {
     background: `radial-gradient(${BLUR_RADIUS}px at ${mousePosition.x}px ${mousePosition.y}px, ${blurColor}${BLUR_OPACITY}, transparent 80%)`,
   };
@@ -119,6 +126,7 @@ const Apply = () => {
           className={`relative overflow-hidden rounded-full bg-google-green font-bold text-google-white shadow-lg backdrop-blur-sm transition-all duration-300 hover:bg-google-green-darker hover:shadow-2xl ${
             isMobile ? 'px-10 py-4 text-base' : 'px-16 py-5 text-xl'
           }`}
+          onClick={handleApplyClick}
         >
           <motion.span
             className="relative z-10 flex items-center justify-center gap-2"
