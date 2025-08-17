@@ -14,7 +14,7 @@ const SolutionChallengeSection = () => {
           GDGoC Konkuk에서 <br className="md:hidden" />
           세상을 바꾸는 도전을 시작하세요!
           <br />
-          최고의 팀원들과 협력하며 글로벌 프로젝트를 경험할 수 있어요
+          최고의 팀원들과 협력하며 글로벌 프로젝트를 경험할 수 있어요.
         </p>
       </div>
       <div className="flex flex-col w-full justify-center">
