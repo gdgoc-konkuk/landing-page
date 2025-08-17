@@ -8,7 +8,7 @@ interface WaveBackgroundProps {
 
 const WaveBackground: React.FC<WaveBackgroundProps> = ({ className = '' }) => {
   return (
-    <div className={`fixed inset-0 overflow-hidden pointer-events-none ${className}`}>
+    <div className={`fixed inset-0 overflow-hidden pointer-events-none z-[-1] ${className}`}>
       {/* Green wave - top left */}
       <svg
         width="464"
