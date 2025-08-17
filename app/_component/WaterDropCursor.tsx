@@ -198,7 +198,7 @@ const WaterDropCursor: React.FC = () => {
     <>
       {/* Main floating cursor */}
       <div
-        className={`fixed pointer-events-none z-[9999] main-cursor ${isOverText ? 'mix-blend-screen' : ''}`}
+        className={`absolute pointer-events-none z-[9999] main-cursor ${isOverText ? 'mix-blend-screen' : ''}`}
         style={{
           left: currentPosition.x,
           top: currentPosition.y,
@@ -254,7 +254,7 @@ const WaterDropCursor: React.FC = () => {
 
       {/* Second floating cursor */}
       <div
-        className={`fixed pointer-events-none z-[9998] main-cursor ${isOverText ? 'mix-blend-screen' : ''}`}
+        className={`absolute pointer-events-none z-[9998] main-cursor ${isOverText ? 'mix-blend-screen' : ''}`}
         style={{
           left: currentPosition2.x,
           top: currentPosition2.y,

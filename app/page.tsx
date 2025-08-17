@@ -3,7 +3,6 @@ import SolutionChallengeSection from '@/app/_component/solution-challenge/Soluti
 import Apply from './_component/apply/Apply';
 import Kprintf from './_component/kprintf/Kprintf';
 
-import WaterDropCursor from './_component/WaterDropCursor';
 import HomeSection from './_component/home/HomeSection';
 import AboutSection from './_component/about/AboutSection';
 
@@ -17,8 +16,6 @@ export default function Home() {
       <SolutionChallengeSection />
       <Kprintf />
       <Apply />
-
-      <WaterDropCursor />
     </div>
   );
 }
