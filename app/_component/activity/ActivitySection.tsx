@@ -16,11 +16,11 @@ const ActivitySection = () => {
           다양한 활동을 통해 함께 성장할 수 있어요.
         </p>
       </div>
-      <div className="flex flex-wrap justify-center gap-8 md:gap-20">
+      <div className="max-w-[1200px] flex flex-wrap justify-center gap-8 md:gap-20">
         {ACTIVITY_DATA.map((activity, index) => (
           <div
             key={index}
-            className="flex-[0_0_calc(33.333%-theme(space.10))] md:flex-[0_0_calc(33.333%-theme(space.20))] max-w-[320px]"
+            className=" flex-[0_0_calc(33.333%-theme(space.10))] md:flex-[0_0_calc(33.333%-theme(space.20))] max-w-[320px]"
           >
             <ActivityCard
               key={index}

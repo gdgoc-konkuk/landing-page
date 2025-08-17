@@ -2,8 +2,8 @@
 import PodiumStand from '@/app/_component/solution-challenge/PodiumStand';
 
 interface PodiumProps {
-  projects: solutionChallengeData[];
-};
+  projects: SolutionChallengeData[];
+}
 
 export default function Podium({ projects }: PodiumProps) {
   const [second, first, third] = projects;
