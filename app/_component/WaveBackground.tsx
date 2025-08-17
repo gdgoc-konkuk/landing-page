@@ -8,15 +8,15 @@ interface WaveBackgroundProps {
 
 const WaveBackground: React.FC<WaveBackgroundProps> = ({ className = '' }) => {
   return (
-    <div className={`absolute inset-0 overflow-hidden pointer-events-none z-[-1] ${className}`}>
+    <div className={`absolute inset-0 overflow-hidden pointer-events-none z-20 ${className}`}>
       {/* Green wave - top left */}
       <svg
-        width="464"
-        height="202"
+        width="185"
+        height="81"
         viewBox="0 0 464 202"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute left-0 top-0 animate-waveFloat"
+        className="absolute left-0 top-0 animate-waveFloat flex-shrink-0 w-[185px] h-[81px] md:w-[371px] md:h-[162px]"
         style={{ animationDelay: '0s', overflow: 'visible' }}
       >
         <path
@@ -37,12 +37,12 @@ const WaveBackground: React.FC<WaveBackgroundProps> = ({ className = '' }) => {
 
       {/* Yellow wave - top right */}
       <svg
-        width="692"
-        height="274"
+        width="277"
+        height="110"
         viewBox="0 0 692 274"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute right-0 top-0 animate-waveFloat"
+        className="absolute right-0 top-0 animate-waveFloat flex-shrink-0 w-[277px] h-[110px] md:w-[554px] md:h-[219px]"
         style={{ animationDelay: '1s', overflow: 'visible', top: '-16px' }}
       >
         <path
@@ -63,12 +63,12 @@ const WaveBackground: React.FC<WaveBackgroundProps> = ({ className = '' }) => {
 
       {/* Blue wave - bottom right */}
       <svg
-        width="537"
-        height="495"
+        width="215"
+        height="198"
         viewBox="0 0 537 495"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute right-0 bottom-0 animate-waveFloat"
+        className="absolute right-0 bottom-0 animate-waveFloat flex-shrink-0 w-[215px] h-[198px] md:w-[430px] md:h-[396px]"
         style={{ animationDelay: '2s', overflow: 'visible' }}
       >
         <path
