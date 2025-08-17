@@ -30,11 +30,13 @@ const KprintfHero = ({
           className="text-7xl md:text-8xl font-bold mb-6"
           variants={itemVariants}
         >
-          <span className="text-google-red">{title}</span>
+          <span className="text-google-red text-5xl md:text-5xl font-google font-bold tracking-wide">
+            {title}
+          </span>
         </motion.h1>
 
         <motion.p
-          className="text-google-Subtitle-700 text-lg mb-8 max-w-2xl mx-auto"
+          className="text-google-Contents font-robotomono text-base md:text-lg  font-regular mt-4 leading-relaxed break-keep"
           variants={itemVariants}
         >
           {description.map((line, index) => (
