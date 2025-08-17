@@ -7,7 +7,6 @@ export default function Home() {
     <div className="flex flex-col">
       <ActivitySection />
       <SolutionChallengeSection />
-      <ActivitySection />
       <Apply />
     </div>
   );
