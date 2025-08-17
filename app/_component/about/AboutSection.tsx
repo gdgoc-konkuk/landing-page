@@ -21,7 +21,7 @@ const AboutSection: React.FC = () => {
   ];
 
   return (
-    <section className="flex flex-col items-center py-12 gap-12">
+    <section className="flex flex-col items-center justify-center min-h-screen gap-12">
       <div className="text-center">
         <h1 className="text-google-green text-2xl md:text-5xl font-google font-bold tracking-wide">
           GDGoC Konkuk
