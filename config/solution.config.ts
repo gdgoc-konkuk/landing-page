@@ -1,4 +1,4 @@
-﻿export const solutionChallengeData: solutionChallengeData[] = [
+﻿export const solutionChallengeData: SolutionChallengeData[] = [
   {
     rank: 2,
     rankText: 'TOP 100',

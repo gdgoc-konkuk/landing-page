@@ -1,16 +1,10 @@
 ﻿import Image from 'next/image';
 
-interface ProjectCardProps {
-  imageUrl: string;
-  title: string;
-  description: string;
-};
-
 export default function ProjectCard({
   imageUrl,
   title,
   description,
-}: ProjectCardProps) {
+}: SolutionChallengeData) {
   return (
     <div className="w-full mx-auto bg-gray-100 rounded-2xl shadow-md overflow-hidden">
       <div className="relative w-full h-32 md:h-48">

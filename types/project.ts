@@ -1,4 +1,4 @@
-﻿type solutionChallengeData = {
+﻿type SolutionChallengeData = {
   rank: number;
   rankText: string;
   isTopThree: boolean;
