@@ -40,26 +40,25 @@ const AboutSection: React.FC = () => {
           return (
             <div
               key={index}
-              className="group relative w-80 h-80 px-6 py-6 bg-white rounded-[10px] shadow-[inset_0px_-1px_8px_0px_rgba(0,0,0,0.25)] flex flex-col justify-start items-center gap-4 cursor-pointer transition-all duration-300"
+              className="group relative w-80 h-80 px-6 py-6 rounded-[10px] shadow-[inset_0px_-1px_8px_0px_rgba(0,0,0,0.25)] flex flex-col justify-start items-center gap-4 cursor-pointer transition-all duration-300"
+              style={{
+                background: `linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.95) 50%, rgba(241,245,249,0.95) 100%)`
+              }}
             >
-              {/* Shimmer border effect */}
+              {/* Static border effect */}
               <div 
                 className="absolute inset-0 rounded-[10px] p-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                 style={{
-                  background: `conic-gradient(from 0deg, ${borderColor}, transparent, ${borderColor}, transparent, ${borderColor})`
+                  background: `linear-gradient(45deg, ${borderColor}, ${borderColor}80, ${borderColor})`
                 }}
               >
-                <div className="w-full h-full bg-white rounded-[8px]" />
+                <div 
+                  className="w-full h-full rounded-[8px]" 
+                  style={{
+                    background: `linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.95) 50%, rgba(241,245,249,0.95) 100%)`
+                  }}
+                />
               </div>
-              
-              {/* Animated gradient border */}
-              <div 
-                className="absolute inset-0 rounded-[10px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-shimmer"
-                style={{
-                  background: `linear-gradient(45deg, ${borderColor}40, transparent, ${borderColor}80, transparent, ${borderColor}40)`,
-                  backgroundSize: '300% 300%'
-                }}
-              />
               
               {/* Card content */}
               <div className="relative z-10 w-full h-full flex flex-col justify-start items-center gap-4"
