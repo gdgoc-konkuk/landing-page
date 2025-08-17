@@ -21,7 +21,7 @@ const AboutSection: React.FC = () => {
   ];
 
   return (
-    <section className="flex flex-col items-center py-12 px-4 gap-12 md:px-20 xl:px-48">
+    <section className="flex flex-col items-center py-12 gap-12">
       <div className="text-center">
         <h1 className="text-google-green text-2xl md:text-5xl font-google font-bold tracking-wide">
           GDGoC Konkuk
@@ -32,7 +32,7 @@ const AboutSection: React.FC = () => {
           다양한 활동을 통해 함께 성장할 수 있어요.
         </p>
       </div>
-      <div className="flex justify-evenly items-center max-w-[1400px] w-full">
+      <div className="flex justify-evenly items-center w-full">
         {cardData.map((card, index) => (
           <div
             key={index}
