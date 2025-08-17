@@ -129,6 +129,27 @@ table {
   }
 }
 
+/* perspective */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+/* 3D 변환 유지 */
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* y축 회전 */
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* 뒷면 안 보이게 */
+.backface-hidden {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
 /* Water drop wobble animation */
 @keyframes wobble {
   0%,

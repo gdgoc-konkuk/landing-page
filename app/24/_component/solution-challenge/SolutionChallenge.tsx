@@ -1,7 +1,7 @@
 'use client';
 
 import { useInView } from 'react-intersection-observer';
-import SolutionCard from './SolutionCard';
+import SolutionCard from '@/app/24/_component/solution-challenge/SolutionCard';
 import { useEffect, useState } from 'react';
 import {
   Carousel,
@@ -11,7 +11,6 @@ import {
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { useCarousel } from '@/components/ui/carousel';
 import Image from 'next/image';
-import LeftChevronIcon from '../../../public/icons/left-chevron.svg';
 
 const solutionData = [
   {
@@ -134,7 +133,7 @@ function PreviousButton() {
   const { scrollPrev } = useCarousel();
   return (
     <Image
-      src={LeftChevronIcon}
+      src="/icons/left-chevron.svg"
       alt="left-chevron"
       width={24}
       height={24}
@@ -148,7 +147,7 @@ function NextButton() {
   const { scrollNext } = useCarousel();
   return (
     <Image
-      src={LeftChevronIcon}
+      src="/icons/left-chevron.svg"
       alt="right-chevron"
       width={24}
       height={24}
