@@ -36,12 +36,12 @@ const AboutSection: React.FC = () => {
         {cardData.map((card, index) => (
           <div
             key={index}
-            className="w-80 h-80 md:w-72 md:h-72 xl:w-96 xl:h-96 px-6 py-4 md:px-8 md:py-6 bg-white rounded-[10px] shadow-[inset_0px_-1px_8px_0px_rgba(0,0,0,0.25)] flex flex-col justify-between items-center"
+            className="w-80 h-80 px-6 py-6 bg-white rounded-[10px] shadow-[inset_0px_-1px_8px_0px_rgba(0,0,0,0.25)] flex flex-col justify-start items-center gap-4"
           >
-            <div className="text-black text-3xl md:text-3xl xl:text-4xl font-bold font-['Pretendard']">
+            <div className="text-black text-3xl font-bold font-['Pretendard'] flex-shrink-0">
               {card.title}
             </div>
-            <div className="w-64 h-40 md:w-56 md:h-36 xl:w-80 xl:h-48 relative">
+            <div className="w-64 h-40 relative flex-shrink-0">
               <Image
                 src={card.image}
                 alt={card.title}
@@ -49,7 +49,7 @@ const AboutSection: React.FC = () => {
                 className="object-cover rounded-lg"
               />
             </div>
-            <p className="text-google-Contents text-sm md:text-sm xl:text-lg font-['Pretendard'] text-center leading-relaxed break-keep">
+            <p className="text-google-Contents text-sm font-['Pretendard'] text-center leading-relaxed break-keep flex-1 flex items-center">
               {card.description}
             </p>
           </div>
