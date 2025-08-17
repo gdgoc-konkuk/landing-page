@@ -61,8 +61,9 @@ const robotoMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'GDSC Konkuk',
-  description: 'GDSC Konkuk Landing Page',
+  title: 'GDGoC Konkuk',
+  description: 'GDGoC Konkuk Landing Page',
+  icons: '/GDG_logo.png',
 };
 
 export default function RootLayout({
