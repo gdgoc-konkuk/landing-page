@@ -8,7 +8,7 @@ import AboutSection from './_component/about/AboutSection';
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-72">
       <HomeSection />
       <AboutSection />
 
