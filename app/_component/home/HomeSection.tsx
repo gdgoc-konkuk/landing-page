@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+import WaveBackground from '../WaveBackground';
 
 interface HomeSectionProps {
   children?: React.ReactNode;
@@ -6,11 +8,22 @@ interface HomeSectionProps {
 
 const HomeSection: React.FC<HomeSectionProps> = ({ children }) => {
   return (
-    <section className="home-section">
-      <div className="container">
-        <h1>Welcome to Home</h1>
-        {children}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <WaveBackground />
+      <div className="relative z-10 flex items-center justify-center p-12 md:p-28 lg:p-40">
+        <Image
+          src="/images/GDGoC_Konkuk_logo.png"
+          alt="GDGoC Konkuk University Logo"
+          width={1457}
+          height={288}
+          priority
+        />
       </div>
+      {children && (
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+          {children}
+        </div>
+      )}
     </section>
   );
 };
