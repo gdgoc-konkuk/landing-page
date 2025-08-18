@@ -24,9 +24,18 @@ const FixedBottomBar = ({ targetDate }: FixedBottomBarProps) => {
     return timeLeft;
   };
 
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState({});
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) {
+      return;
+    }
+
     const timer = setTimeout(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
@@ -64,15 +73,15 @@ const FixedBottomBar = ({ targetDate }: FixedBottomBarProps) => {
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-            className="w-full bg-white/80 backdrop-blur-sm border-t border-gray-200 p-3 flex justify-between items-center lg:max-w-2xl lg:rounded-xl lg:shadow-2xl lg:border-transparent pointer-events-auto lg:mb-5"
+            className="w-full bg-white/80 backdrop-blur-sm border-t border-gray-200 px-3 py-2 flex justify-between items-center lg:max-w-2xl lg:rounded-full lg:shadow-2xl lg:border-transparent pointer-events-auto lg:mb-5 lg:px-6 lg:py-3"
     >
       <div className="flex items-center">
-        <span style={{ color: '#f9ab00' }} className="text-base lg:text-lg font-semibold">25-26 멤버 지원하기</span>
-        <span className="ml-2 text-sm lg:text-base font-light">{timerComponents.length ? timerComponents : <span>Time&apos;s up!</span>}</span>
+        <span style={{ color: '#f9ab00' }} className="text-sm lg:text-lg font-semibold whitespace-nowrap">25-26 멤버 지원하기</span>
+        <span className="ml-2 text-xs lg:text-base font-light">{isClient && timerComponents.length ? timerComponents : <span></span>}</span>
       </div>
       <button
         onClick={handleApplyClick}
-        className="relative overflow-hidden rounded-full bg-google-green text-white font-bold shadow-lg transition-all duration-300 hover:bg-green-700 hover:shadow-xl px-6 py-2 text-sm lg:px-8 lg:py-3 lg:text-base"
+        className="relative overflow-hidden rounded-full bg-google-green text-white font-bold shadow-lg transition-all duration-300 hover:bg-green-700 hover:shadow-xl px-4 py-2 text-sm lg:px-8 lg:py-3 lg:text-base"
       >
         지원하기
       </button>
