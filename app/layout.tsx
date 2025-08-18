@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import localFont from 'next/font/local';
+import FixedBottomBar from '@/components/ui/FixedBottomBar';
+
 
 const pretendard = localFont({
   src: '../public/fonts/PretendardVariable.woff2',
@@ -76,7 +78,12 @@ export default function RootLayout({
       lang="en"
       className={`${pretendard.variable} ${suite.variable} ${googleSans.variable} ${gangwon.variable} ${openSans.variable} ${robotoMono.variable}`}
     >
-      <body className={pretendard.className}>{children}</body>
+      <body className={pretendard.className}>
+        {children}
+        <div className="fixed bottom-0 left-0 right-0 z-50 flex justify-center pointer-events-none">
+          <FixedBottomBar targetDate="2025-09-05T23:59:59" />
+        </div>
+      </body>
     </html>
   );
 }
