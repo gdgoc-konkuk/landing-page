@@ -68,7 +68,7 @@ const FixedBottomBar = ({ targetDate }: FixedBottomBarProps) => {
     >
       <div className="flex items-center">
         <span style={{ color: '#f9ab00' }} className="text-base lg:text-lg font-semibold">25-26 멤버 지원하기</span>
-        <span className="ml-2 text-sm lg:text-base font-light">{timerComponents.length ? timerComponents : <span>Time's up!</span>}</span>
+        <span className="ml-2 text-sm lg:text-base font-light">{timerComponents.length ? timerComponents : <span>Time&apos;s up!</span>}</span>
       </div>
       <button
         onClick={handleApplyClick}
