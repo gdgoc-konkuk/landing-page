@@ -254,6 +254,11 @@ const config = {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
         },
+        shimmer: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -265,6 +270,7 @@ const config = {
         'slide-2': 'slide 6s infinite 2s',
         'slide-4': 'slide 6s infinite 4s',
         carousel: 'carousel 15s linear infinite',
+        shimmer: 'shimmer 2s ease-in-out infinite',
       },
       fontFamily: {
         pretendard: 'var(--font-pretendard)',
