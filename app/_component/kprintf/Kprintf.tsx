@@ -82,14 +82,11 @@ const Kprintf = () => {
         variants={timelineVariants}
       >
         <div className="max-w-6xl mx-auto">
-          {kprintfData.map((yearData) => (
-            <KprintfYearSection
-              key={yearData.year}
-              yearData={yearData}
-              itemVariants={itemVariants}
-              cardVariants={cardVariants}
-            />
-          ))}
+          <KprintfYearSection
+            yearData={kprintfData}
+            itemVariants={itemVariants}
+            cardVariants={cardVariants}
+          />
         </div>
       </motion.section>
     </div>
