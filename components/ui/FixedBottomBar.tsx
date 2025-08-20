@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { calculateTimeLeft, formatTimeLeft } from '@/lib/utils';
+import dynamic from 'next/dynamic';
 
 interface FixedBottomBarProps {
   targetDate: string;
@@ -84,4 +85,7 @@ const FixedBottomBar = ({ targetDate }: FixedBottomBarProps) => {
   );
 };
 
-export default FixedBottomBar;
+export default dynamic(() => Promise.resolve(FixedBottomBar), {
+  ssr: false,
+  loading: () => null,
+});
