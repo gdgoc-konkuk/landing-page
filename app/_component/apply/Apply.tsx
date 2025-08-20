@@ -66,6 +66,7 @@ const Apply = () => {
 
   return (
     <motion.section
+      id="apply"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.1 }}
