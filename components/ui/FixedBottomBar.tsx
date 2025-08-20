@@ -9,7 +9,7 @@ interface FixedBottomBarProps {
 }
 
 const FixedBottomBar = ({ targetDate }: FixedBottomBarProps) => {
-  const [timeLeft, setTimeLeft] = useState({});
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(targetDate));
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
