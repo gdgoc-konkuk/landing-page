@@ -57,11 +57,6 @@ const KprintfCarousel = ({
       </div>
 
       <div className="flex items-center justify-between mt-6">
-        <div className="flex items-center gap-2">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-        </div>
-
         <div className="flex gap-2">
           {scrollSnaps.map((_, index) => (
             <DotButton
@@ -74,6 +69,10 @@ const KprintfCarousel = ({
               }`}
             />
           ))}
+        </div>
+        <div className="flex items-center gap-2">
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
       </div>
     </section>
