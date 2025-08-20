@@ -54,10 +54,7 @@ const Apply = () => {
   };
 
   const handleApplyClick = () => {
-    window.open(
-      'https://gdg.community.dev/gdg-on-campus-konkuk-university-seoul-south-korea/',
-      '_blank',
-    );
+    window.open('https://forms.gle/FafiUro9V6uw4tgq9', '_blank');
   };
 
   const backgroundStyle = {
