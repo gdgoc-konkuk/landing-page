@@ -20,12 +20,7 @@ const AboutCard: React.FC<AboutCardProps> = ({
   const borderColor = colors[index];
 
   return (
-    <div
-      className="group relative w-80 h-80 rounded-2xl shadow-lg overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105"
-      style={{
-        background: `linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(248,250,252,0.95) 50%, rgba(241,245,249,0.95) 100%)`,
-      }}
-    >
+    <div className="group relative w-80 h-80 rounded-2xl shadow-lg overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105">
       {/* Hover border effect */}
       <div
         className="absolute inset-0 rounded-2xl p-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-300"
