@@ -11,7 +11,6 @@ export default function Home() {
     <div className="flex flex-col gap-72">
       <HomeSection />
       <AboutSection />
-
       <ActivitySection />
       <SolutionChallengeSection />
       <Kprintf />
