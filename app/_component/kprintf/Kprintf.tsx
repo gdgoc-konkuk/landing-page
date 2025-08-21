@@ -75,7 +75,7 @@ const Kprintf = () => {
 
       {/* Timeline Section */}
       <motion.section
-        className="py-20 px-8"
+        className="py-15 px-8"
         initial="hidden"
         whileInView="visible"
         viewport={{ amount: 0.3, once: true }}
