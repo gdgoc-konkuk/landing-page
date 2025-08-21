@@ -5,20 +5,20 @@ import { KprintfCardData } from '../../../config/kprintf.config';
 import KprintfCarousel from './KprintfCarousel';
 
 interface KprintfYearSectionProps {
-  yearData: KprintfCardData[];
+  cardData: KprintfCardData[];
   itemVariants: Variants;
   cardVariants: Variants;
 }
 
 const KprintfYearSection = ({
-  yearData,
+  cardData,
   itemVariants,
   cardVariants,
 }: KprintfYearSectionProps) => {
   return (
     <motion.div className="mb-5 py-10" variants={itemVariants}>
       <KprintfCarousel
-        cards={yearData}
+        cards={cardData}
         options={{ align: 'start', loop: true }}
         cardVariants={cardVariants}
       />

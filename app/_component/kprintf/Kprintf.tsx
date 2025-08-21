@@ -83,7 +83,7 @@ const Kprintf = () => {
       >
         <div className="max-w-6xl mx-auto">
           <KprintfYearSection
-            yearData={kprintfData}
+            cardData={kprintfData}
             itemVariants={itemVariants}
             cardVariants={cardVariants}
           />
