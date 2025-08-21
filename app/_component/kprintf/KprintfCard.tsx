@@ -27,11 +27,16 @@ const KprintfCard = ({ card, variants }: KprintfCardProps) => {
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
+        {/* Dark gradient overlay for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+        {/* Title overlay */}
+        <div className="relative z-10 text-center p-4">
+          <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white drop-shadow-lg">
+            {card.title}
+          </h3>
+        </div>
       </div>
       <div className="p-4 md:p-6">
-        <h4 className="text-lg md:text-xl lg:text-2xl font-semibold mb-2 text-gray-800">
-          {card.title}
-        </h4>
         <p className="text-sm md:text-base lg:text-lg text-google-Contents">
           {card.description}
         </p>
