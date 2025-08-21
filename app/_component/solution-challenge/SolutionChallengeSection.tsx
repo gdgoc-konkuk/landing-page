@@ -19,7 +19,7 @@ const SolutionChallengeSection = () => {
       </div>
       <div className="flex flex-col w-full justify-center">
         <Podium projects={solutionChallengeData} />
-        <ProjectCarousel />
+        {/* <ProjectCarousel /> */}
       </div>
     </section>
   );
