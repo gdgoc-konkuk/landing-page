@@ -56,7 +56,9 @@ const FixedBottomBar = ({ targetDate }: FixedBottomBarProps) => {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-          className="w-full bg-white/80 backdrop-blur-sm border-t border-gray-200 px-3 py-2 flex justify-between items-center lg:max-w-2xl lg:rounded-full lg:shadow-2xl lg:border-transparent pointer-events-auto lg:mb-5 lg:px-6 lg:py-3"
+          className="w-full px-3 py-2 bg-white/80 backdrop-blur-sm border-t border-gray-200 
+           flex justify-between items-center pointer-events-auto
+           lg:max-w-2xl lg:px-6 lg:py-3 lg:mb-10 lg:rounded-full lg:shadow-2xl lg:border-transparent"
         >
           <div className="flex items-center">
             {hasTimeLeft ? (

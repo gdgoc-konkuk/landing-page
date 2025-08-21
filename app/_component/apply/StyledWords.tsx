@@ -63,7 +63,7 @@ const AnimatedWords = ({ text, hoverHandler }: AnimatedWordsProps) => {
       {words.map((word, index) => (
         <motion.span
           key={index}
-          className="inline-block mr-2"
+          className="inline-block mr-2 font-semibold font-google"
           style={{ color: getWordColor(word) }}
           whileHover={HOVER_ANIMATION}
           onMouseEnter={() => handleWordHover(word)}

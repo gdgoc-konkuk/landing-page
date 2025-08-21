@@ -11,36 +11,36 @@ export interface KprintfCardData {
 
 export const kprintfData: KprintfCardData[] = [
   {
-    id: '2024-main',
-    title: 'K-printf',
-    subtitle: 'K-printf 2024',
-    description: '성공적으로 개최된 첫 번째 컨퍼런스',
+    id: '1',
+    title: 'Kprintf 2024',
+    subtitle: 'Kprintf 2024',
+    description: '건국대학교에서 개최된 첫 번째 테크 컨퍼런스',
     bgColor: 'bg-gray-900',
     textColor: 'text-white',
   },
   {
-    id: '2024-success',
+    id: '2',
     title: 'Great Success',
-    subtitle: '성공적인 개최',
-    description: '많은 개발자들이 함께한 뜻깊은 시간',
+    subtitle: 'Kprintf 2025',
+    description: '200여명의 학생 개발자들이 함께한 뜻깊은 시간',
     bgColor: 'bg-green-100',
     textColor: 'text-gray-800',
     icon: '🎯',
   },
   {
-    id: '2024-participants',
+    id: '3',
     title: 'Amazing Participants',
-    subtitle: '참여해주신 개발자들',
-    description: '함께 성장하는 개발자 커뮤니티',
+    subtitle: '다양한 기술 세션',
+    description: '최신 기술 트렌드와 개발 경험 공유',
     bgColor: 'bg-blue-50',
     textColor: 'text-blue-600',
     icon: '👥',
   },
   {
-    id: '2024-sessions',
+    id: '4',
     title: 'Tech Sessions',
-    subtitle: '다양한 기술 세션',
-    description: '최신 기술 트렌드와 개발 경험 공유',
+    subtitle: '연사자분들과 커피챗 기회',
+    description: '선배 개발자와의 네트워킹 기회',
     bgColor: 'bg-purple-50',
     textColor: 'text-purple-600',
     icon: '💡',
@@ -48,10 +48,10 @@ export const kprintfData: KprintfCardData[] = [
 ];
 
 export const heroConfig = {
-  title: 'K-printf',
+  title: 'Kprintf',
   description: [
     'GDGoC Konkuk에서 주최하는 Kprintf를 소개합니다!',
-    '수 많은 세션과 활동을 통해 개발자들이 함께 성장할 수 있는 기회를 제공합니다.',
+    '건국대학교의 대표적인 개발자 컨퍼런스로 자리매김한 연례 행사예요.',
   ],
   image: '',
 };
