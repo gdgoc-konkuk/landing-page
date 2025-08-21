@@ -30,7 +30,7 @@ const KprintfHero = ({
           className="text-7xl md:text-8xl font-bold mb-6"
           variants={itemVariants}
         >
-          <span className="text-google-red text-2xl md:text-5xl font-google font-bold tracking-wide">
+          <span className="text-google-red text-2xl md:text-5xl font-google font-bold ">
             {title}
           </span>
         </motion.h1>

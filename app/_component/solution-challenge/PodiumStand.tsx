@@ -1,6 +1,10 @@
 ﻿import Image from 'next/image';
 
-export default function PodiumStand({ rankText, isTopThree, className }: PodiumStandProps) {
+export default function PodiumStand({
+  rankText,
+  isTopThree,
+  className,
+}: PodiumStandProps) {
   const containerClasses = `w-full mx-auto flex flex-col justify-center items-center bg-white p-1 ${className}`;
 
   return (
@@ -16,7 +20,7 @@ export default function PodiumStand({ rankText, isTopThree, className }: PodiumS
             />
           </div>
           <span
-            className="text-xl md:text-3xl font-bold tracking-wide text-white"
+            className="text-xl md:text-3xl font-bold  text-white"
             style={{ textShadow: '0px 2px 15px #F49600' }}
           >
             {rankText}

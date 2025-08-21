@@ -6,7 +6,7 @@ const ActivitySection = () => {
   return (
     <section className="flex flex-col items-center py-12 px-4 gap-12 md:px-20 xl:px-48">
       <div className="text-center">
-        <h1 className="text-google-yellow text-2xl md:text-5xl font-google font-bold tracking-wide">
+        <h1 className="text-google-yellow text-2xl md:text-5xl font-google font-bold ">
           Activity
         </h1>
         <p className="text-google-Contents text-sm md:text-lg font-robotomono font-regular mt-4 leading-relaxed break-keep">
