@@ -6,25 +6,25 @@
     imageUrl: '/images/solution/pathpal.webp',
     title: 'PathPal',
     description:
-      'PathPal은 시각장애인의 안전하고 독립적인 보행을 보장하며 그들에게 사회적 편의를 제공합니다.',
+      '2024년 Global TOP 100에 선정되었습니다.',
   },
   {
     rank: 1,
     rankText: 'TOP 3',
     isTopThree: true,
     imageUrl: '/images/solution/pathpal.webp',
-    title: 'PathPal',
+    title: 'Atempo',
     description:
-      'PathPal은 시각장애인의 안전하고 독립적인 보행을 보장하며 그들에게 사회적 편의를 제공합니다.',
+      '2025년 Most Social Impact Award에 선정되었습니다.',
   },
   {
     rank: 3,
     rankText: 'TOP 100',
     isTopThree: false,
     imageUrl: '/images/solution/pathpal.webp',
-    title: 'PathPal',
+    title: 'Glow-Alarm',
     description:
-      'PathPal은 시각장애인의 안전하고 독립적인 보행을 보장하며 그들에게 사회적 편의를 제공합니다.',
+      '2024년 Global TOP 100에 선정되었습니다',
   },
 ];
 
