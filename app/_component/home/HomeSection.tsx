@@ -64,7 +64,7 @@ const HomeSection = ({ children }: HomeSectionProps) => {
               className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-google text-google-green mt-1 md:mt-2"
               variants={itemVariants}
             >
-              Konkuk University
+              on Campus Konkuk
             </motion.h2>
           </div>
         </motion.div>
