@@ -12,7 +12,7 @@ const AboutSection: React.FC = () => {
         <p className="text-google-Contents text-sm md:text-lg font-robotomono font-regular mt-4 leading-relaxed break-keep">
           GDGoC Konkuk는 협업, 공유, 도전의 기회를 제공합니다!
           <br />
-          함께 성장하는 커뮤니티를 지향합니다.
+          함께 성장하는 커뮤니티를 만들고있어요.
         </p>
       </div>
       <div className="flex flex-col gap-10 md:flex-row justify-center items-center w-full">
