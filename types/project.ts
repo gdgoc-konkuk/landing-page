@@ -5,6 +5,7 @@
   imageUrl: string;
   title: string;
   description: string;
+  githubUrl: string;
 };
 
 type PodiumStandProps = {

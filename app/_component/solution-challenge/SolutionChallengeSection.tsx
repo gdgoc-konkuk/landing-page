@@ -1,5 +1,4 @@
 ﻿import React from 'react';
-import ProjectCarousel from '@/app/_component/solution-challenge/ProjectCarousel';
 import Podium from '@/app/_component/solution-challenge/Podium';
 import { solutionChallengeData } from '@/config/solution.config';
 
