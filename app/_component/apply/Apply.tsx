@@ -96,7 +96,7 @@ const Apply = () => {
 
         <motion.h2
           variants={ITEM_VARIANTS}
-          className={`font-bold text-google-Subtitle mb-12 leading-relaxed break-keep ${
+          className={`font-bold text-google-Subtitle mb-12 leading-relaxed break-keep font-google ${
             isMobile ? 'text-xl' : 'text-3xl'
           }`}
         >
