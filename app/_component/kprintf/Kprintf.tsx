@@ -40,27 +40,6 @@ const itemVariants = {
   },
 } as const;
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: 'spring',
-      stiffness: 100,
-      damping: 15,
-    },
-  },
-  hover: {
-    scale: 1.02,
-    transition: {
-      type: 'spring',
-      stiffness: 300,
-      damping: 20,
-    },
-  },
-} as const;
-
 const Kprintf = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -85,7 +64,6 @@ const Kprintf = () => {
           <KprintfYearSection
             cardData={kprintfData}
             itemVariants={itemVariants}
-            cardVariants={cardVariants}
           />
         </div>
       </motion.section>
