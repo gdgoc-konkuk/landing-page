@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import ActivityIcon from '@/app/_component/activity/ActivityIcon';
 
 interface ActivityCardProps {
@@ -45,11 +46,12 @@ function ActivityCard({
 
         {/* Back side */}
         <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-[25px] shadow-xl isolate overflow-hidden">
-          <div
-            className="absolute inset-0 w-full h-full bg-cover bg-center rounded-[25px]"
-            style={{
-              backgroundImage: `url(${backgroundImage})`,
-            }}
+          <Image
+            src={backgroundImage}
+            alt={title}
+            fill
+            className="object-cover rounded-[25px]"
+            loading="eager"
           />
 
           <div

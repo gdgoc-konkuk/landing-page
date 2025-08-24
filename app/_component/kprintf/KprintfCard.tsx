@@ -4,16 +4,26 @@ import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import { KprintfCardData } from '../../../config/kprintf.config';
 
+const cardVariants = {
+  hover: {
+    scale: 1.02,
+    transition: {
+      type: 'spring',
+      stiffness: 300,
+      damping: 20,
+    },
+  },
+} as const;
+
 interface KprintfCardProps {
   card: KprintfCardData;
-  variants: Variants;
 }
 
-const KprintfCard = ({ card, variants }: KprintfCardProps) => {
+const KprintfCard = ({ card }: KprintfCardProps) => {
   return (
     <motion.div
       className="group bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:cursor-pointer"
-      variants={variants}
+      variants={cardVariants}
       whileHover="hover"
     >
       <div
@@ -23,6 +33,7 @@ const KprintfCard = ({ card, variants }: KprintfCardProps) => {
           <Image
             src={card.image}
             alt={card.title}
+            loading="eager"
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
