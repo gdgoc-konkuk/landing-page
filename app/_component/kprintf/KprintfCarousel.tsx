@@ -15,14 +15,9 @@ import KprintfCard from './KprintfCard';
 interface KprintfCarouselProps {
   cards: KprintfCardData[];
   options?: EmblaOptionsType;
-  cardVariants: Variants;
 }
 
-const KprintfCarousel = ({
-  cards,
-  options,
-  cardVariants,
-}: KprintfCarouselProps) => {
+const KprintfCarousel = ({ cards, options }: KprintfCarouselProps) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
@@ -44,13 +39,9 @@ const KprintfCarousel = ({
               className="flex-[0_0_100%] min-w-0 md:flex-[0_0_50%] pl-4"
               key={card.id}
             >
-              <motion.div
-                className="h-full mr-4"
-                variants={cardVariants}
-                whileHover="hover"
-              >
-                <KprintfCard card={card} variants={cardVariants} />
-              </motion.div>
+              <div className="h-full mr-4">
+                <KprintfCard card={card} />
+              </div>
             </div>
           ))}
         </div>
