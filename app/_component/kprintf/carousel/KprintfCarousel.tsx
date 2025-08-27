@@ -11,19 +11,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { motion, Variants } from 'framer-motion';
 import { KprintfCardData, kprintfData } from '@/config/kprintf.config';
 import KprintfCard from '../KprintfCard';
-
-const itemVariants = {
-  hidden: { y: 50, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      type: 'spring',
-      stiffness: 100,
-      damping: 12,
-    },
-  },
-} as const;
+import { itemVariants } from '@/app/animations';
 
 const KprintfCarousel = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ align: 'start', loop: true });
