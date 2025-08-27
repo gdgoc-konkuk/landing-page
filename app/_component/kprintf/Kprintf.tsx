@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { kprintfData, heroConfig } from '../../../config/kprintf.config';
 import KprintfHero from './KprintfHero';
 import KprintfYearSection from './KprintfYearSection';
+import KprintfCarousel from './carousel/KprintfCarousel';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -61,10 +62,7 @@ const Kprintf = () => {
         variants={timelineVariants}
       >
         <div className="max-w-6xl mx-auto">
-          <KprintfYearSection
-            cardData={kprintfData}
-            itemVariants={itemVariants}
-          />
+          <KprintfCarousel />
         </div>
       </motion.section>
     </div>
