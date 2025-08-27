@@ -61,9 +61,7 @@ const Kprintf = () => {
         viewport={{ amount: 0.3, once: true }}
         variants={timelineVariants}
       >
-        <div className="max-w-6xl mx-auto">
-          <KprintfCarousel />
-        </div>
+        <KprintfCarousel />
       </motion.section>
     </div>
   );

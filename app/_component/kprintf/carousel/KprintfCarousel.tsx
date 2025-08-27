@@ -39,7 +39,10 @@ const KprintfCarousel = () => {
   } = usePrevNextButtons(emblaApi);
 
   return (
-    <motion.div className="mb-5 py-10" variants={itemVariants}>
+    <motion.div
+      className="max-w-6xl mx-auto mb-5 py-10"
+      variants={itemVariants}
+    >
       <section className="relative">
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="py-8 flex">
