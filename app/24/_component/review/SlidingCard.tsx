@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent } from '@/app/24/_component/ui/card';
 import LeftChevronIcon from '../../../public/icons/left-chevron.svg';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from '@/components/ui/carousel';
+} from '@/app/24/_component/ui/carousel';
 
 import reviewCardDanggn from '../../../public/images/review/reviewCardDanggn.webp';
 import reviewCardGraduation from '../../../public/images/review/reviewCardGraduation.webp';

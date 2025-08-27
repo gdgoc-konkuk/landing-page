@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import localFont from 'next/font/local';
-import FixedBottomBar from '@/components/ui/FixedBottomBar';
-
+import FixedBottomBar from './_component/ui/FixedBottomBar';
 
 const pretendard = localFont({
   src: '../public/fonts/PretendardVariable.woff2',

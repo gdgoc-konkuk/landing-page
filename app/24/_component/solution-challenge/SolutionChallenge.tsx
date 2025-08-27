@@ -7,9 +7,9 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from '@/components/ui/carousel';
+} from '@/app/24/_component/ui/carousel';
 import { useIsMobile } from '@/hooks/useIsMobile';
-import { useCarousel } from '@/components/ui/carousel';
+import { useCarousel } from '@/app/24/_component/ui/carousel';
 import Image from 'next/image';
 
 const solutionData = [

@@ -7,7 +7,7 @@ import useEmblaCarousel, {
 import { ArrowLeft, ArrowRight } from 'lucide-react'; // 화살표 아이콘 임포트
 
 import { cn } from '@/lib/utils'; // 클래스 이름을 조합하는 유틸리티 함수 임포트
-import { Button } from '@/components/ui/button'; // 버튼 컴포넌트 임포트
+import { Button } from '@/app/24/_component/ui/button'; // 버튼 컴포넌트 임포트
 
 type CarouselApi = UseEmblaCarouselType[1]; // Embla Carousel API 타입 정의
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>; // useEmblaCarousel의 파라미터 타입 정의
@@ -262,4 +262,3 @@ export {
   CarouselPrevious, // CarouselPrevious 컴포넌트 익스포트
   CarouselNext, // CarouselNext 컴포넌트 익스포트
 };
-

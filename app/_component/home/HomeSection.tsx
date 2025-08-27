@@ -3,8 +3,8 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import WaveBackground from '../WaveBackground';
-import WaterDropCursor from '../WaterDropCursor';
+import WaveBackground from './background/WaveBackground';
+import WaterDropCursor from './background/WaterDropCursor';
 
 const containerVariants = {
   initial: {},
