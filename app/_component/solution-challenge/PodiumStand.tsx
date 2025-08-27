@@ -1,10 +1,7 @@
 ﻿import Image from 'next/image';
+import React from 'react';
 
-export default function PodiumStand({
-  rankText,
-  isTopThree,
-  className,
-}: PodiumStandProps) {
+const PodiumStand = ({ rankText, isTopThree, className }: PodiumStandProps) => {
   const containerClasses = `w-full mx-auto flex flex-col justify-center items-center bg-white p-1 ${className}`;
 
   return (
@@ -35,4 +32,6 @@ export default function PodiumStand({
       )}
     </div>
   );
-}
+};
+
+export default PodiumStand;

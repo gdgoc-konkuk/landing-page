@@ -4,7 +4,7 @@ import blueCharacter from '../../../public/images/apply/blueCharacter.webp';
 import Image from 'next/image';
 import ApplyKeywords from './ApplyKewords';
 import Popup from './Popup';
-import ApplyButton from '@/components/ui/ApplyButton';
+import ApplyButton from '@/app/24/_component/ui/ApplyButton';
 
 export default function Apply() {
   const [isMobile, setIsMobile] = useState(

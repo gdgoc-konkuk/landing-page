@@ -1,12 +1,12 @@
 ﻿import Image from 'next/image';
 import Link from 'next/link';
 
-export default function ProjectCard({
+const ProjectCard = ({
   imageUrl,
   title,
   description,
   githubUrl,
-}: SolutionChallengeData) {
+}: SolutionChallengeData) => {
   return (
     <div className="w-full mx-auto bg-gray-100 rounded-2xl shadow-md overflow-hidden">
       <div className="relative w-full h-32 md:h-48">
@@ -44,4 +44,6 @@ export default function ProjectCard({
       </div>
     </div>
   );
-}
+};
+
+export default ProjectCard;

@@ -6,7 +6,7 @@ interface WaveBackgroundProps {
   className?: string;
 }
 
-const WaveBackground: React.FC<WaveBackgroundProps> = ({ className = '' }) => {
+const WaveBackground = ({ className = '' }: WaveBackgroundProps) => {
   return (
     <div
       className={`absolute inset-0 overflow-hidden pointer-events-none z-20 ${className}`}

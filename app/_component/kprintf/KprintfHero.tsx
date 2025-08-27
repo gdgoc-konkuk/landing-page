@@ -2,22 +2,15 @@
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
+import { containerVariants, itemVariants } from '@/app/animations';
 
 interface KprintfHeroProps {
   title: string;
   description: string[];
   image?: string;
-  containerVariants: Variants;
-  itemVariants: Variants;
 }
 
-const KprintfHero = ({
-  title,
-  description,
-  image,
-  containerVariants,
-  itemVariants,
-}: KprintfHeroProps) => {
+const KprintfHero = ({ title, description, image }: KprintfHeroProps) => {
   return (
     <motion.section
       className=" flex flex-col items-center justify-center px-8"

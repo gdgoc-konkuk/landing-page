@@ -4,12 +4,12 @@ import React, { useState, useEffect } from 'react';
 import Card from './Card';
 import Dot from './Dot';
 
-import keywordTogether from '../../public/images/keyword/keywordTogether.webp';
-import keywordSharing from '../../public/images/keyword/keywordSharing.webp';
-import keywordChallenge from '../../public/images/keyword/keywordChallenge.webp';
-import mobileTogether from '../../public/images/keyword/mobileTogether.webp';
-import mobileSharing from '../../public/images/keyword/mobileSharing.webp';
-import mobileChallenge from '../../public/images/keyword/mobileChallenge.webp';
+import keywordTogether from '../../../../public/images/keyword/keywordTogether.webp';
+import keywordSharing from '../../../../public/images/keyword/keywordSharing.webp';
+import keywordChallenge from '../../../../public/images/keyword/keywordChallenge.webp';
+import mobileTogether from '../../../../public/images/keyword/mobileTogether.webp';
+import mobileSharing from '../../../../public/images/keyword/mobileSharing.webp';
+import mobileChallenge from '../../../../public/images/keyword/mobileChallenge.webp';
 import { StaticImageData } from 'next/image';
 
 interface CardData {
@@ -125,7 +125,7 @@ const Keyword: React.FC = () => {
                   activeIndex === index ? bigCircleColor[index] : 'bg-[#D9D9D9]'
                 } // light gray color for big Circle
                 onHover={() => setActiveIndex(index)}
-                onLeave={() => { }}
+                onLeave={() => {}}
               />
               {index < cards.length - 1 && (
                 <div className="h-[173px] w-[1px] bg-[#6C6C6C] mx-auto rounded-full"></div>

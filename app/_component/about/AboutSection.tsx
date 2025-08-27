@@ -2,7 +2,7 @@ import React from 'react';
 import { aboutData } from '@/config/about.config';
 import AboutCard from './AboutCard';
 
-const AboutSection: React.FC = () => {
+const AboutSection = () => {
   return (
     <section className="flex flex-col items-center justify-center min-h-screen gap-12">
       <div className="text-center">

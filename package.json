@@ -1,6 +1,6 @@
 {
-  "name": "gdsc-landing",
-  "version": "0.1.0",
+  "name": "gdgoc-landing",
+  "version": "2.1.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "husky"
+    "postinstall": "husky",
+    "shadcn": "npx shadcn@latest"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.0",
