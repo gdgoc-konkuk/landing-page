@@ -4,7 +4,7 @@ interface ActivityIconProps {
   colors: IconColors;
 }
 
-function ActivityIcon({ colors }: ActivityIconProps) {
+const ActivityIcon = ({ colors }: ActivityIconProps) => {
   const petalStyle =
     'w-[46.4%] h-[35.9%] absolute origin-top-left rounded-full border-[4px] border-black';
 
@@ -28,6 +28,6 @@ function ActivityIcon({ colors }: ActivityIconProps) {
       />
     </div>
   );
-}
+};
 
 export default ActivityIcon;

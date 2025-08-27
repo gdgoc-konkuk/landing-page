@@ -10,12 +10,7 @@ interface AboutCardProps {
   index: number;
 }
 
-const AboutCard: React.FC<AboutCardProps> = ({
-  title,
-  image,
-  description,
-  index,
-}) => {
+const AboutCard = ({ title, image, description, index }: AboutCardProps) => {
   const colors = ['#ea4335', '#f9ab00', '#34a853']; // Google red, yellow, green
   const borderColor = colors[index];
 

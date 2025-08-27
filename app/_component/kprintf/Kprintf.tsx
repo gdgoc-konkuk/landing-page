@@ -1,9 +1,8 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { kprintfData, heroConfig } from '../../../config/kprintf.config';
+import { heroConfig } from '../../../config/kprintf.config';
 import KprintfHero from './KprintfHero';
-import KprintfYearSection from './KprintfYearSection';
 import KprintfCarousel from './carousel/KprintfCarousel';
 
 const containerVariants = {

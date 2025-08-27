@@ -12,12 +12,12 @@ interface ActivityCardProps {
   backgroundImage: string;
 }
 
-function ActivityCard({
+const ActivityCard = ({
   title,
   colors,
   description,
   backgroundImage,
-}: ActivityCardProps) {
+}: ActivityCardProps) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleFlip = () => {
@@ -74,6 +74,6 @@ function ActivityCard({
       </div>
     </motion.div>
   );
-}
+};
 
 export default ActivityCard;

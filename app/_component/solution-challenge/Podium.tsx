@@ -5,7 +5,7 @@ interface PodiumProps {
   projects: SolutionChallengeData[];
 }
 
-export default function Podium({ projects }: PodiumProps) {
+const Podium = ({ projects }: PodiumProps) => {
   const [second, first, third] = projects;
 
   return (
@@ -73,4 +73,6 @@ export default function Podium({ projects }: PodiumProps) {
       </div>
     </div>
   );
-}
+};
+
+export default Podium;
