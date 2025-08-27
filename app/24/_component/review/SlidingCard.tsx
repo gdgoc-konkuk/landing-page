@@ -1,23 +1,23 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/app/24/_component/ui/card';
-import LeftChevronIcon from '../../../public/icons/left-chevron.svg';
+import LeftChevronIcon from '../../../../public/icons/left-chevron.svg';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from '@/app/24/_component/ui/carousel';
 
-import reviewCardDanggn from '../../../public/images/review/reviewCardDanggn.webp';
-import reviewCardGraduation from '../../../public/images/review/reviewCardGraduation.webp';
-import reviewCardRegularSeminar from '../../../public/images/review/reviewCardRegularSeminar.webp';
-import reviewCardHanyang from '../../../public/images/review/reviewCardHanyang.webp';
-import reviewCardBuildwithAI from '../../../public/images/review/reviewCardBuildwithAI.webp';
-import reviewCardFlutter from '../../../public/images/review/reviewCardFlutter.webp';
-import reviewCardGDSCGermany from '../../../public/images/review/reviewCardGDSCGermany.webp';
-import reviewCardWRTN from '../../../public/images/review/reviewCardWRTN.webp';
-import reviewCardKprintf from '../../../public/images/review/reviewCardKprintf.webp';
-import reviewCardMTandTrip from '../../../public/images/review/reviewCardMTandTrip.webp';
+import reviewCardDanggn from '../../../../public/images/review/reviewCardDanggn.webp';
+import reviewCardGraduation from '../../../../public/images/review/reviewCardGraduation.webp';
+import reviewCardRegularSeminar from '../../../../public/images/review/reviewCardRegularSeminar.webp';
+import reviewCardHanyang from '../../../../public/images/review/reviewCardHanyang.webp';
+import reviewCardBuildwithAI from '../../../../public/images/review/reviewCardBuildwithAI.webp';
+import reviewCardFlutter from '../../../../public/images/review/reviewCardFlutter.webp';
+import reviewCardGDSCGermany from '../../../../public/images/review/reviewCardGDSCGermany.webp';
+import reviewCardWRTN from '../../../../public/images/review/reviewCardWRTN.webp';
+import reviewCardKprintf from '../../../../public/images/review/reviewCardKprintf.webp';
+import reviewCardMTandTrip from '../../../../public/images/review/reviewCardMTandTrip.webp';
 import { useMediaQuery } from 'react-responsive';
 
 const cards = [

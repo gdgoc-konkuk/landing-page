@@ -1,6 +1,6 @@
 import ApplyButton from '@/app/24/_component/ui/ApplyButton';
 import Logo from './Logo';
-import LogoImage from '../../../public/images/main/main-logo.webp';
+import LogoImage from '../../../../public/images/main/main-logo.webp';
 import Image from 'next/image';
 
 export default function Main() {
