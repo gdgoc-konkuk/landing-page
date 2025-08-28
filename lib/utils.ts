@@ -18,7 +18,6 @@ export const formatTimeLeft = (timeLeft: object) => {
   };
 
   return timeEntries
-    .filter(([_, value]) => value > 0)
     .map(([key, value]) => `${value}${labels[key as keyof typeof labels]}`)
     .join(' ');
 };
