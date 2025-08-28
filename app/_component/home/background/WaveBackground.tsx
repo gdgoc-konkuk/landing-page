@@ -42,7 +42,7 @@ const WaveBackground = ({ className = '' }: WaveBackgroundProps) => {
       <svg
         width="277"
         height="110"
-        viewBox="0 0 692 274"
+        viewBox="0 0 690 274"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="absolute right-0 top-0 animate-waveFloat flex-shrink-0 w-[277px] h-[110px] md:w-[554px] md:h-[219px] transition-all duration-300 ease-in-out"
