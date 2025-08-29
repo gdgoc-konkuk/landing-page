@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import localFont from 'next/font/local';
 import FixedBottomBar from './_component/ui/FixedBottomBar';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const pretendard = localFont({
   src: '../public/fonts/PretendardVariable.woff2',
@@ -87,6 +88,7 @@ export default function RootLayout({
           </div>
         )}
       </body>
+      <GoogleAnalytics gaId="G-L9R400BYX6" />
     </html>
   );
 }
