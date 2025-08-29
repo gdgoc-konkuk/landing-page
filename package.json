@@ -12,6 +12,7 @@
     "shadcn": "npx shadcn@latest"
   },
   "dependencies": {
+    "@next/third-parties": "^15.5.2",
     "@radix-ui/react-slot": "^1.1.0",
     "animate.css": "^4.1.1",
     "class-variance-authority": "^0.7.0",
